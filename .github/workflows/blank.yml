@@ -15,6 +15,9 @@ jobs:
           cd scripts
           sudo apt install -y whiptail setools lzip wine winetricks patchelf e2fsprogs python3-pip aria2 p7zip-full attr xz-utils unzip
           ./build.sh --help
-          ./build.sh --compress
+          ./build.sh --remove-amazon
           ls
-          # ./run.sh
+      - uses: actions/upload-artifact@v3
+        with:
+          name: WSA_Win10_retail
+          path: libsndfile_MinGW64_Static.7z
