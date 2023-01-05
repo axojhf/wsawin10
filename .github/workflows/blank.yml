@@ -11,6 +11,7 @@ jobs:
       - name: Build
         run: |
           git clone --depth=1 https://github.com/LSPosed/MagiskOnWSALocal.git
+          cd MagiskOnWSALocal
           cd scripts
           ./build.sh --help
           ./run.sh
