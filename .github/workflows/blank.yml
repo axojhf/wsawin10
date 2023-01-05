@@ -1,0 +1,16 @@
+name: CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: |
+          git clone --depth=1 https://github.com/LSPosed/MagiskOnWSALocal.git
+          cd scripts
+          ./build.sh --help
+          ./run.sh
