@@ -13,6 +13,7 @@ jobs:
           git clone --depth=1 https://github.com/LSPosed/MagiskOnWSALocal.git
           cd MagiskOnWSALocal
           cd scripts
+          apt install -y whiptail setools lzip wine winetricks patchelf e2fsprogs python3-pip aria2 p7zip-full attr xz-utils unzip
           ./build.sh --help
           ./build.sh --compress
           ls
